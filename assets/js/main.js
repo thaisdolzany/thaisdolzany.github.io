@@ -26,8 +26,12 @@ const track = document.getElementById('projects-track');
 const cards = [...track.querySelectorAll('.projects__card')];
 document.querySelectorAll('.projects__filter').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.projects__filter').forEach(b => b.classList.remove('is-active'));
+    document.querySelectorAll('.projects__filter').forEach(b => {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('is-active');
+    btn.setAttribute('aria-pressed', 'true');
     const f = btn.dataset.filter;
     cards.forEach(c => { c.hidden = f !== 'all' && c.dataset.cat !== f; });
     track.scrollTo({ left: 0 });
@@ -38,13 +42,26 @@ document.getElementById('proj-prev').addEventListener('click', () => track.scrol
 document.getElementById('proj-next').addEventListener('click', () => track.scrollBy({ left: step() }));
 
 /*=============== WORK TABS ===============*/
-const tabs = document.querySelectorAll('.work__button');
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('is-active'));
-    document.querySelectorAll('.work__area').forEach(a => a.classList.remove('is-active'));
-    tab.classList.add('is-active');
-    document.querySelector(tab.dataset.target).classList.add('is-active');
+const tabs = [...document.querySelectorAll('.work__button')];
+const selectTab = tab => {
+  tabs.forEach(t => {
+    t.classList.remove('is-active');
+    t.setAttribute('aria-selected', 'false');
+    t.tabIndex = -1;
+  });
+  document.querySelectorAll('.work__area').forEach(a => a.classList.remove('is-active'));
+  tab.classList.add('is-active');
+  tab.setAttribute('aria-selected', 'true');
+  tab.tabIndex = 0;
+  document.querySelector(tab.dataset.target).classList.add('is-active');
+};
+tabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => selectTab(tab));
+  tab.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+    selectTab(next);
+    next.focus();
   });
 });
 

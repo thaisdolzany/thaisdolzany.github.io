@@ -11,13 +11,18 @@
    <meta property="og:image" content="https://thaisdolzany.github.io/assets/img/avatar.png">
    <meta property="og:type" content="website">
 
+   <meta name="theme-color" content="#030309">
    <link rel="icon" href="assets/img/avatar.png" type="image/png">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Unbounded:wght@400;500;600;700&display=swap">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
    <link rel="stylesheet" href="assets/css/styles.css">
 
    <title>Thaís Dolzany, PhD</title>
 </head>
 <body>
+   <a href="#main" class="skip-link">Skip to content</a>
    <!--==================== HEADER ====================-->
    <header class="header" id="header">
       <nav class="nav container">
@@ -30,14 +35,14 @@
                <li><a href="#work" class="nav__link">Experience</a></li>
                <li><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
-            <button class="nav__close" id="nav-close" aria-label="Close menu"><i class="ri-close-large-line"></i></button>
+            <button class="nav__close" id="nav-close" aria-label="Close menu"><i class="ri-close-large-line" aria-hidden="true"></i></button>
          </div>
 
-         <button class="nav__toggle" id="nav-toggle" aria-label="Open menu"><i class="ri-menu-4-line"></i></button>
+         <button class="nav__toggle" id="nav-toggle" aria-label="Open menu"><i class="ri-menu-4-line" aria-hidden="true"></i></button>
       </nav>
    </header>
 
-   <main class="main">
+   <main class="main" id="main" tabindex="-1">
       <!--==================== HOME ====================-->
       <section class="home section" id="home">
          <div class="home__container container">
@@ -48,7 +53,7 @@
 
             <div class="home__visual">
                <div class="home__blob"></div>
-               <img src="assets/img/home-portrait.webp" alt="Portrait of Thaís Dolzany" class="home__img" width="786" height="1120">
+               <img src="assets/img/home-portrait.webp" alt="Portrait of Thaís Dolzany" class="home__img" width="786" height="1120" fetchpriority="high">
             </div>
 
             <div class="home__role">
@@ -60,13 +65,13 @@
             </div>
 
             <ul class="home__social">
-               <li><a href="https://github.com/thaisdolzany" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line"></i></a></li>
-               <li><a href="https://www.linkedin.com/in/thaisdolzany/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></a></li>
-               <li><a href="https://orcid.org/0000-0002-5503-4051" target="_blank" rel="noopener" aria-label="ORCID"><i class="ri-graduation-cap-line"></i></a></li>
+               <li><a href="https://github.com/thaisdolzany" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line" aria-hidden="true"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/thaisdolzany/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-box-line" aria-hidden="true"></i></a></li>
+               <li><a href="https://orcid.org/0000-0002-5503-4051" target="_blank" rel="noopener" aria-label="ORCID"><i class="ri-graduation-cap-line" aria-hidden="true"></i></a></li>
             </ul>
 
             <a href="#projects" class="home__cta">
-               See projects <i class="ri-arrow-down-line"></i>
+               See projects <i class="ri-arrow-down-line" aria-hidden="true"></i>
             </a>
          </div>
       </section>
@@ -111,8 +116,8 @@
                </ul>
 
                <div class="about__buttons">
-                  <a href="#contact" class="button">Get in touch <i class="ri-send-plane-line"></i></a>
-                  <a href="https://github.com/thaisdolzany" target="_blank" rel="noopener" class="button button--ghost">GitHub <i class="ri-github-line"></i></a>
+                  <a href="#contact" class="button">Get in touch <i class="ri-send-plane-line" aria-hidden="true"></i></a>
+                  <a href="https://github.com/thaisdolzany" target="_blank" rel="noopener" class="button button--ghost">GitHub <i class="ri-github-line" aria-hidden="true"></i></a>
                </div>
             </div>
          </div>
@@ -123,10 +128,10 @@
          <h2 class="section__title">Selected <span>projects</span></h2>
 
          <div class="projects__container container">
-            <div class="projects__filters" role="tablist">
-               <button class="projects__filter is-active" data-filter="all">All</button>
-               <button class="projects__filter" data-filter="research">Research</button>
-               <button class="projects__filter" data-filter="tools">Tools</button>
+            <div class="projects__filters" role="group" aria-label="Filter projects">
+               <button class="projects__filter is-active" data-filter="all" aria-pressed="true">All</button>
+               <button class="projects__filter" data-filter="research" aria-pressed="false">Research</button>
+               <button class="projects__filter" data-filter="tools" aria-pressed="false">Tools</button>
             </div>
 
             <div class="projects__track" id="projects-track">
@@ -153,30 +158,30 @@
                         Discovery in two scRNA-seq atlases, validation in metastasis and TCGA-BRCA. The
                         protocol was published before the analysis, as a pre-registration.
                      </p>
-                     <a href="https://github.com/thaisdolzany/BRIDGE-TF-protocol" target="_blank" rel="noopener" class="projects__link">View protocol <i class="ri-arrow-right-up-line"></i></a>
+                     <a href="https://github.com/thaisdolzany/BRIDGE-TF-protocol" target="_blank" rel="noopener" class="projects__link">View protocol <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
                <!-- Melanoma resistance -->
                <article class="projects__card" data-cat="research">
                   <div class="projects__cover">
-                     <img src="assets/img/proj-melanoma-resistance.webp" alt="UMAP of melanoma cells coloured by cell type" loading="lazy">
+                     <img src="assets/img/proj-melanoma-resistance.webp" width="875" height="700" alt="UMAP of melanoma cells coloured by cell type" loading="lazy">
                   </div>
                   <div class="projects__data">
                      <span class="projects__subtitle">Melanoma · scRNA-seq · Immunotherapy</span>
                      <h3 class="projects__title">Malignant resistance program &amp; T cell exclusion</h3>
                      <p class="projects__description">
-                        7,186 cells from 31 tumours (GSE115978). After treatment, malignant cells lose
-                        MIA and EMP1 and gain SERPINF1, a pattern consistent with dedifferentiation.
+                        7,186 cells from 31 tumours (GSE115978). A tumour-level pseudobulk reanalysis
+                        cut 5,384 cell-level hits to 117; EMP1 loss after treatment is the robust signal.
                      </p>
-                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/02-melanoma-drug-resistance" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line"></i></a>
+                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/02-melanoma-drug-resistance" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
                <!-- Trials Brazil -->
                <article class="projects__card" data-cat="research">
                   <div class="projects__cover">
-                     <img src="assets/img/proj-trials-brazil.webp" alt="Line chart of oncology trials with sites in Brazil by start year" loading="lazy">
+                     <img src="assets/img/proj-trials-brazil.webp" width="900" height="450" alt="Line chart of oncology trials with sites in Brazil by start year" loading="lazy">
                   </div>
                   <div class="projects__data">
                      <span class="projects__subtitle">Clinical operations · Python · API</span>
@@ -186,14 +191,14 @@
                         72% are industry-sponsored and 73% multinational: a feasibility view by phase,
                         tumour type and state.
                      </p>
-                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/04-oncology-trials-brazil" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line"></i></a>
+                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/04-oncology-trials-brazil" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
                <!-- Solubility ML -->
                <article class="projects__card" data-cat="research">
                   <div class="projects__cover">
-                     <img src="assets/img/proj-solubility.webp" alt="Predicted versus observed aqueous solubility on a scaffold split" loading="lazy">
+                     <img src="assets/img/proj-solubility.webp" width="778" height="700" alt="Predicted versus observed aqueous solubility on a scaffold split" loading="lazy">
                   </div>
                   <div class="projects__data">
                      <span class="projects__subtitle">ADME · Cheminformatics · Machine learning</span>
@@ -203,14 +208,14 @@
                         but 1.23 log units on unseen scaffolds, and error grows as similarity to the
                         training set falls.
                      </p>
-                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/03-adme-solubility-ml" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line"></i></a>
+                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/03-adme-solubility-ml" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
                <!-- Melanoma biomarkers -->
                <article class="projects__card" data-cat="research">
                   <div class="projects__cover">
-                     <img src="assets/img/proj-volcano.webp" alt="Volcano plot of differential expression" loading="lazy">
+                     <img src="assets/img/proj-volcano.webp" width="855" height="700" alt="Volcano plot of differential expression" loading="lazy">
                      <span class="projects__badge projects__badge--muted">In progress</span>
                   </div>
                   <div class="projects__data">
@@ -220,14 +225,14 @@
                         16,291 CD45+ cells from 48 biopsies (GSE120575). Cell states and transcriptional
                         signatures that separate responders from non-responders to anti-PD-1 and anti-CTLA-4.
                      </p>
-                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/01-melanoma-single-cell-biomarkers" target="_blank" rel="noopener" class="projects__link">View pipeline <i class="ri-arrow-right-up-line"></i></a>
+                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/01-melanoma-single-cell-biomarkers" target="_blank" rel="noopener" class="projects__link">View pipeline <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
                <!-- scanpy-lowmem -->
                <article class="projects__card" data-cat="tools">
                   <div class="projects__cover projects__cover--art">
-                     <div class="projects__glyph"><i class="ri-cpu-line"></i><span>16 GB</span></div>
+                     <div class="projects__glyph"><i class="ri-cpu-line" aria-hidden="true"></i><span>16 GB</span></div>
                   </div>
                   <div class="projects__data">
                      <span class="projects__subtitle">Scanpy · Harmony · pySCENIC</span>
@@ -236,14 +241,14 @@
                         Patterns and patches to integrate ~486k single cells on a 16 GB laptop. Each fix
                         documents the MemoryError or incompatibility it solved.
                      </p>
-                     <a href="https://github.com/thaisdolzany/scanpy-lowmem" target="_blank" rel="noopener" class="projects__link">View repository <i class="ri-arrow-right-up-line"></i></a>
+                     <a href="https://github.com/thaisdolzany/scanpy-lowmem" target="_blank" rel="noopener" class="projects__link">View repository <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
                <!-- omics-fetch -->
                <article class="projects__card" data-cat="tools">
                   <div class="projects__cover projects__cover--art">
-                     <div class="projects__glyph"><i class="ri-database-2-line"></i><span>GEO · cBioPortal · GDC</span></div>
+                     <div class="projects__glyph"><i class="ri-database-2-line" aria-hidden="true"></i><span>GEO · cBioPortal · GDC</span></div>
                   </div>
                   <div class="projects__data">
                      <span class="projects__subtitle">Python · Public data</span>
@@ -252,14 +257,14 @@
                         Download scripts for public cancer data that keep working on large cohorts,
                         straight from the NCBI FTP layout and the cBioPortal API.
                      </p>
-                     <a href="https://github.com/thaisdolzany/omics-fetch" target="_blank" rel="noopener" class="projects__link">View repository <i class="ri-arrow-right-up-line"></i></a>
+                     <a href="https://github.com/thaisdolzany/omics-fetch" target="_blank" rel="noopener" class="projects__link">View repository <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
                <!-- Calculator -->
                <article class="projects__card" data-cat="tools">
                   <div class="projects__cover projects__cover--art">
-                     <div class="projects__glyph"><i class="ri-test-tube-line"></i><span>Cell seeding</span></div>
+                     <div class="projects__glyph"><i class="ri-test-tube-line" aria-hidden="true"></i><span>Cell seeding</span></div>
                      <span class="projects__badge">Live</span>
                   </div>
                   <div class="projects__data">
@@ -269,14 +274,14 @@
                         Bench tool that turns a counted cell suspension into a master-mix recipe for
                         plates and flasks. Bilingual, runs in the browser.
                      </p>
-                     <a href="https://thaisdolzany.github.io/calculadora-plaqueamento/" target="_blank" rel="noopener" class="projects__link">Open tool <i class="ri-arrow-right-up-line"></i></a>
+                     <a href="https://thaisdolzany.github.io/calculadora-plaqueamento/" target="_blank" rel="noopener" class="projects__link">Open tool <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
             </div>
 
             <div class="projects__nav">
-               <button class="projects__arrow" id="proj-prev" aria-label="Previous projects"><i class="ri-arrow-left-s-line"></i></button>
-               <button class="projects__arrow" id="proj-next" aria-label="Next projects"><i class="ri-arrow-right-s-line"></i></button>
+               <button class="projects__arrow" id="proj-prev" aria-label="Previous projects"><i class="ri-arrow-left-s-line" aria-hidden="true"></i></button>
+               <button class="projects__arrow" id="proj-next" aria-label="Next projects"><i class="ri-arrow-right-s-line" aria-hidden="true"></i></button>
             </div>
          </div>
       </section>
@@ -286,12 +291,12 @@
          <h2 class="section__title">Experience &amp; <span>education</span></h2>
 
          <div class="work__container container">
-            <div class="work__tabs" role="tablist">
-               <button class="work__button is-active" data-target="#experience" role="tab">Experience</button>
-               <button class="work__button" data-target="#education" role="tab">Education</button>
+            <div class="work__tabs" role="tablist" aria-label="Experience and education">
+               <button class="work__button is-active" data-target="#experience" role="tab" id="tab-experience" aria-selected="true" aria-controls="experience">Experience</button>
+               <button class="work__button" data-target="#education" role="tab" id="tab-education" aria-selected="false" aria-controls="education" tabindex="-1">Education</button>
             </div>
 
-            <div class="work__area is-active" id="experience">
+            <div class="work__area is-active" id="experience" role="tabpanel" aria-labelledby="tab-experience">
                <article class="work__card">
                   <span class="work__dot"></span>
                   <h3 class="work__title">Responsible Pharmacist · Medical Affairs &amp; Scientific Lead</h3>
@@ -318,7 +323,7 @@
                </article>
             </div>
 
-            <div class="work__area" id="education">
+            <div class="work__area" id="education" role="tabpanel" aria-labelledby="tab-education">
                <article class="work__card">
                   <span class="work__dot"></span>
                   <h3 class="work__title">PhD in Biochemistry</h3>
@@ -351,42 +356,42 @@
 
          <div class="services__container container grid">
             <div class="services__card">
-               <button class="services__header" aria-expanded="false">
+               <button class="services__header" aria-expanded="false" aria-controls="exp-1">
                   <span class="services__num">01</span>
                   <h3 class="services__title">Single-cell &amp; bulk transcriptomics</h3>
-                  <i class="ri-add-line services__icon"></i>
+                  <i class="ri-add-line services__icon" aria-hidden="true"></i>
                </button>
-               <div class="services__info">
+               <div class="services__info" id="exp-1">
                   <p>QC, integration of multi-cohort atlases, clustering and annotation, malignant cell states, regulon inference and differential expression, with Seurat, Scanpy, Harmony, pySCENIC and DESeq2.</p>
                </div>
             </div>
             <div class="services__card">
-               <button class="services__header" aria-expanded="false">
+               <button class="services__header" aria-expanded="false" aria-controls="exp-2">
                   <span class="services__num">02</span>
                   <h3 class="services__title">Target prioritisation &amp; drug repurposing</h3>
-                  <i class="ri-add-line services__icon"></i>
+                  <i class="ri-add-line services__icon" aria-hidden="true"></i>
                </button>
-               <div class="services__info">
+               <div class="services__info" id="exp-2">
                   <p>Connecting expression programs to druggable targets and existing compounds using perturbation signatures, dependency screens and interaction networks.</p>
                </div>
             </div>
             <div class="services__card">
-               <button class="services__header" aria-expanded="false">
+               <button class="services__header" aria-expanded="false" aria-controls="exp-3">
                   <span class="services__num">03</span>
                   <h3 class="services__title">Clinical &amp; regulatory landscape</h3>
-                  <i class="ri-add-line services__icon"></i>
+                  <i class="ri-add-line services__icon" aria-hidden="true"></i>
                </button>
-               <div class="services__info">
+               <div class="services__info" id="exp-3">
                   <p>Trial registry analyses for feasibility, medical affairs and regulatory work with ANVISA, bridging research questions and development decisions.</p>
                </div>
             </div>
             <div class="services__card">
-               <button class="services__header" aria-expanded="false">
+               <button class="services__header" aria-expanded="false" aria-controls="exp-4">
                   <span class="services__num">04</span>
                   <h3 class="services__title">Extracellular vesicles &amp; cancer biology</h3>
-                  <i class="ri-add-line services__icon"></i>
+                  <i class="ri-add-line services__icon" aria-hidden="true"></i>
                </button>
-               <div class="services__info">
+               <div class="services__info" id="exp-4">
                   <p>Bench background in EV biology, kinase signalling in leukaemia and polymeric nanoparticles, which shapes how I read and question computational results.</p>
                </div>
             </div>
@@ -397,7 +402,7 @@
       <section class="pubs section" id="publications">
          <h2 class="section__title"><span>Publications</span></h2>
          <div class="marquee" aria-hidden="true">
-            <div class="marquee__track"><span>Frontiers in Medicine</span><i class="ri-asterisk"></i><span>Frontiers in Cell and Developmental Biology</span><i class="ri-asterisk"></i><span>Journal of Biomedical Nanotechnology</span><i class="ri-asterisk"></i><span>Biopolymers</span><i class="ri-asterisk"></i><span>Advances in Experimental Medicine and Biology</span><i class="ri-asterisk"></i></div>
+            <div class="marquee__track"><span>Frontiers in Medicine</span><i class="ri-asterisk" aria-hidden="true"></i><span>Frontiers in Cell and Developmental Biology</span><i class="ri-asterisk" aria-hidden="true"></i><span>Journal of Biomedical Nanotechnology</span><i class="ri-asterisk" aria-hidden="true"></i><span>Biopolymers</span><i class="ri-asterisk" aria-hidden="true"></i><span>Advances in Experimental Medicine and Biology</span><i class="ri-asterisk" aria-hidden="true"></i></div>
          </div>
          <div class="pubs__container container">
             <ul class="pubs__list">
@@ -408,7 +413,7 @@
                         <span class="pubs__title">Proteomic and functional comparison of extracellular vesicles from wild-type and Lyn-deficient stromal cells</span>
                         <span class="pubs__meta">Advances in Experimental Medicine and Biology · Book chapter</span>
                      </span>
-                     <i class="ri-arrow-right-up-line pubs__icon"></i>
+                     <i class="ri-arrow-right-up-line pubs__icon" aria-hidden="true"></i>
                   </a>
                </li>
                <li>
@@ -418,7 +423,7 @@
                         <span class="pubs__title">Stromal cells support the survival of human primary chronic lymphocytic leukemia (CLL) cells through Lyn-driven extracellular vesicles</span>
                         <span class="pubs__meta">Frontiers in Medicine · Article</span>
                      </span>
-                     <i class="ri-arrow-right-up-line pubs__icon"></i>
+                     <i class="ri-arrow-right-up-line pubs__icon" aria-hidden="true"></i>
                   </a>
                </li>
                <li>
@@ -428,7 +433,7 @@
                         <span class="pubs__title">CD30-positive extracellular vesicles enable the targeting of CD30-negative DLBCL cells by the CD30 antibody-drug conjugate brentuximab vedotin</span>
                         <span class="pubs__meta">Frontiers in Cell and Developmental Biology · Article</span>
                      </span>
-                     <i class="ri-arrow-right-up-line pubs__icon"></i>
+                     <i class="ri-arrow-right-up-line pubs__icon" aria-hidden="true"></i>
                   </a>
                </li>
                <li>
@@ -438,7 +443,7 @@
                         <span class="pubs__title">Intracellular targeting of poly lactic-co-glycolic acid nanoparticles by surface functionalization with peptides</span>
                         <span class="pubs__meta">Journal of Biomedical Nanotechnology · Article</span>
                      </span>
-                     <i class="ri-arrow-right-up-line pubs__icon"></i>
+                     <i class="ri-arrow-right-up-line pubs__icon" aria-hidden="true"></i>
                   </a>
                </li>
                <li>
@@ -448,11 +453,11 @@
                         <span class="pubs__title">Inhibition of melanoma metastasis by dual-peptide PLGA NPs</span>
                         <span class="pubs__meta">Biopolymers (Peptide Science) · Article</span>
                      </span>
-                     <i class="ri-arrow-right-up-line pubs__icon"></i>
+                     <i class="ri-arrow-right-up-line pubs__icon" aria-hidden="true"></i>
                   </a>
                </li>
             </ul>
-            <a href="https://orcid.org/0000-0002-5503-4051" target="_blank" rel="noopener" class="button button--ghost pubs__more">Full record on ORCID <i class="ri-arrow-right-up-line"></i></a>
+            <a href="https://orcid.org/0000-0002-5503-4051" target="_blank" rel="noopener" class="button button--ghost pubs__more">Full record on ORCID <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
          </div>
       </section>
 
@@ -468,17 +473,17 @@
 
             <div class="contact__grid">
                <a href="https://www.linkedin.com/in/thaisdolzany/" target="_blank" rel="noopener" class="contact__card">
-                  <i class="ri-linkedin-box-line"></i>
+                  <i class="ri-linkedin-box-line" aria-hidden="true"></i>
                   <span class="contact__label">LinkedIn</span>
                   <span class="contact__value">Send a message</span>
                </a>
                <a href="https://github.com/thaisdolzany" target="_blank" rel="noopener" class="contact__card">
-                  <i class="ri-github-line"></i>
+                  <i class="ri-github-line" aria-hidden="true"></i>
                   <span class="contact__label">GitHub</span>
                   <span class="contact__value">@thaisdolzany</span>
                </a>
                <a href="https://orcid.org/0000-0002-5503-4051" target="_blank" rel="noopener" class="contact__card">
-                  <i class="ri-graduation-cap-line"></i>
+                  <i class="ri-graduation-cap-line" aria-hidden="true"></i>
                   <span class="contact__label">ORCID</span>
                   <span class="contact__value">Publication record</span>
                </a>
@@ -491,7 +496,7 @@
    <footer class="footer">
       <div class="footer__container container">
          <span class="footer__copy">&copy; <span id="year"></span> Thaís Dolzany</span>
-         <span class="footer__place"><i class="ri-map-pin-line"></i> São Paulo, Brazil</span>
+         <span class="footer__place"><i class="ri-map-pin-line" aria-hidden="true"></i> São Paulo, Brazil</span>
       </div>
    </footer>
 
