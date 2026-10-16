@@ -88,17 +88,16 @@
             </div>
 
             <div class="about__data">
-               <h3 class="about__heading">From the bench to the network.</h3>
+               <h3 class="about__heading">Pharmacist and translational oncology researcher</h3>
                <p class="about__description">
                   I am a pharmacist with a PhD in Biochemistry from the University of Cologne, Germany,
                   where I studied extracellular vesicles and Lyn kinase signalling in chronic lymphocytic
-                  leukaemia. Over ten years of research took me from nanoparticles to vesicles to
-                  networks: today I work on <b>single-cell and bulk transcriptomics</b>,
-                  <b>target prioritisation</b> and <b>drug repurposing</b> in cancer, built on public
-                  data and reproducible pipelines.
+                  leukaemia. My master's was on peptide-functionalised PLGA nanoparticles. I now work on
+                  <b>single-cell and bulk transcriptomics</b>, <b>target prioritisation</b> and
+                  <b>drug repurposing</b> in cancer, with public data and code that others can rerun.
                </p>
                <p class="about__description">
-                  I also work on the industry side, as Responsible Pharmacist and Medical Affairs &amp;
+                  I am also Responsible Pharmacist and Medical Affairs &amp;
                   Scientific Lead at a pharmaceutical company in São Paulo, and I teach in the Pharmacy
                   programme at Afya Universidade Unigranrio.
                </p>
@@ -174,7 +173,7 @@
                         7,186 cells from 31 tumours (GSE115978). A tumour-level pseudobulk reanalysis
                         cut 5,384 cell-level hits to 117; EMP1 loss after treatment is the robust signal.
                      </p>
-                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/02-melanoma-drug-resistance" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/melanoma-scrnaseq-resistance" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
@@ -191,7 +190,7 @@
                         72% are industry-sponsored and 73% multinational: a feasibility view by phase,
                         tumour type and state.
                      </p>
-                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/04-oncology-trials-brazil" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/oncology-trials-brazil" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
@@ -208,24 +207,7 @@
                         but 1.23 log units on unseen scaffolds, and error grows as similarity to the
                         training set falls.
                      </p>
-                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/03-adme-solubility-ml" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
-                  </div>
-               </article>
-
-               <!-- Melanoma biomarkers -->
-               <article class="projects__card" data-cat="research">
-                  <div class="projects__cover">
-                     <img src="assets/img/proj-volcano.webp" width="855" height="700" alt="Volcano plot of differential expression" loading="lazy">
-                     <span class="projects__badge projects__badge--muted">In progress</span>
-                  </div>
-                  <div class="projects__data">
-                     <span class="projects__subtitle">Melanoma · Smart-seq2 · Biomarkers</span>
-                     <h3 class="projects__title">Response to checkpoint blockade</h3>
-                     <p class="projects__description">
-                        16,291 CD45+ cells from 48 biopsies (GSE120575). Cell states and transcriptional
-                        signatures that separate responders from non-responders to anti-PD-1 and anti-CTLA-4.
-                     </p>
-                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/01-melanoma-single-cell-biomarkers" target="_blank" rel="noopener" class="projects__link">View pipeline <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/solubility-scaffold-shift" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
@@ -238,8 +220,8 @@
                      <span class="projects__subtitle">Scanpy · Harmony · pySCENIC</span>
                      <h3 class="projects__title">scanpy-lowmem</h3>
                      <p class="projects__description">
-                        Patterns and patches to integrate ~486k single cells on a 16 GB laptop. Each fix
-                        documents the MemoryError or incompatibility it solved.
+                        Patterns and patches to integrate ~486k single cells on a 16 GB laptop, with tests
+                        and a memory benchmark showing that centred sparse PCA costs no extra RAM.
                      </p>
                      <a href="https://github.com/thaisdolzany/scanpy-lowmem" target="_blank" rel="noopener" class="projects__link">View repository <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
@@ -254,8 +236,8 @@
                      <span class="projects__subtitle">Python · Public data</span>
                      <h3 class="projects__title">omics-fetch</h3>
                      <p class="projects__description">
-                        Download scripts for public cancer data that keep working on large cohorts,
-                        straight from the NCBI FTP layout and the cBioPortal API.
+                        Download scripts for GEO, cBioPortal and TCGA that check file sizes, record
+                        checksums and report failed files. Covered by 18 tests.
                      </p>
                      <a href="https://github.com/thaisdolzany/omics-fetch" target="_blank" rel="noopener" class="projects__link">View repository <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
@@ -272,7 +254,7 @@
                      <h3 class="projects__title">Cell seeding calculator</h3>
                      <p class="projects__description">
                         Bench tool that turns a counted cell suspension into a master-mix recipe for
-                        plates and flasks. Bilingual, runs in the browser.
+                        plates and flasks. Bilingual, with tested formulas.
                      </p>
                      <a href="https://thaisdolzany.github.io/calculadora-plaqueamento/" target="_blank" rel="noopener" class="projects__link">Open tool <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
@@ -382,7 +364,7 @@
                   <i class="ri-add-line services__icon" aria-hidden="true"></i>
                </button>
                <div class="services__info" id="exp-3">
-                  <p>Trial registry analyses for feasibility, medical affairs and regulatory work with ANVISA, bridging research questions and development decisions.</p>
+                  <p>Trial-registry analyses for feasibility, medical affairs, and regulatory work with ANVISA.</p>
                </div>
             </div>
             <div class="services__card">
@@ -392,7 +374,7 @@
                   <i class="ri-add-line services__icon" aria-hidden="true"></i>
                </button>
                <div class="services__info" id="exp-4">
-                  <p>Bench background in EV biology, kinase signalling in leukaemia and polymeric nanoparticles, which shapes how I read and question computational results.</p>
+                  <p>Laboratory background in EV biology, kinase signalling in leukaemia and polymeric nanoparticles.</p>
                </div>
             </div>
          </div>
