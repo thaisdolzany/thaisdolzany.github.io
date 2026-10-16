@@ -106,7 +106,7 @@
 
                <ul class="about__tools">
                   <li>R</li><li>Python</li><li>Seurat</li><li>Scanpy</li><li>Harmony</li>
-                  <li>pySCENIC</li><li>DESeq2</li><li>GSEA</li><li>pandas</li><li>Git</li>
+                  <li>pySCENIC</li><li>DESeq2</li><li>GSEA</li><li>pandas</li><li>RDKit</li><li>XGBoost</li><li>scikit-learn</li><li>Git</li>
                   <li>GEO</li><li>TCGA</li><li>cBioPortal</li><li>ClinicalTrials.gov</li>
                </ul>
 
@@ -187,6 +187,23 @@
                         tumour type and state.
                      </p>
                      <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/04-oncology-trials-brazil" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line"></i></a>
+                  </div>
+               </article>
+
+               <!-- Solubility ML -->
+               <article class="projects__card" data-cat="research">
+                  <div class="projects__cover">
+                     <img src="assets/img/proj-solubility.webp" alt="Predicted versus observed aqueous solubility on a scaffold split" loading="lazy">
+                  </div>
+                  <div class="projects__data">
+                     <span class="projects__subtitle">ADME · Cheminformatics · Machine learning</span>
+                     <h3 class="projects__title">Solubility prediction under scaffold shift</h3>
+                     <p class="projects__description">
+                        9,145 curated molecules (AqSolDB). XGBoost reaches RMSE 0.85 on a random split
+                        but 1.23 log units on unseen scaffolds, and error grows as similarity to the
+                        training set falls.
+                     </p>
+                     <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/03-adme-solubility-ml" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line"></i></a>
                   </div>
                </article>
 
