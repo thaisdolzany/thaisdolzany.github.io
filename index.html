@@ -140,33 +140,6 @@
             </div>
 
             <div class="projects__track" id="projects-track">
-               <!-- BRIDGE-TF -->
-               <article class="projects__card" data-cat="research">
-                  <div class="projects__cover projects__cover--art">
-                     <svg viewBox="0 0 320 180" aria-hidden="true" class="projects__art">
-                        <g fill="none" stroke="currentColor" stroke-width="1.2" opacity=".75">
-                           <path d="M40 140 L110 70 L190 110 L270 40"/><path d="M110 70 L150 30 L190 110"/>
-                           <path d="M40 140 L190 110"/><path d="M150 30 L270 40"/><path d="M190 110 L250 150"/>
-                        </g>
-                        <g fill="currentColor">
-                           <circle cx="40" cy="140" r="6"/><circle cx="110" cy="70" r="9"/><circle cx="190" cy="110" r="11"/>
-                           <circle cx="270" cy="40" r="7"/><circle cx="150" cy="30" r="5"/><circle cx="250" cy="150" r="6"/>
-                        </g>
-                     </svg>
-                     <span class="projects__badge">Pre-registered</span>
-                  </div>
-                  <div class="projects__data">
-                     <span class="projects__subtitle">Breast cancer · scRNA-seq · Regulons</span>
-                     <h3 class="projects__title">BRIDGE-TF</h3>
-                     <p class="projects__description">
-                        Conserved transcription-factor modules behind malignant cell-state plasticity.
-                        Discovery in two scRNA-seq atlases, validation in metastasis and TCGA-BRCA. The
-                        protocol was published before the analysis, as a pre-registration.
-                     </p>
-                     <a href="https://github.com/thaisdolzany/BRIDGE-TF-protocol" target="_blank" rel="noopener" class="projects__link">View protocol <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
-                  </div>
-               </article>
-
                <!-- Melanoma resistance -->
                <article class="projects__card" data-cat="research">
                   <div class="projects__cover">
@@ -176,8 +149,9 @@
                      <span class="projects__subtitle">Melanoma · scRNA-seq · Immunotherapy</span>
                      <h3 class="projects__title">Malignant resistance program &amp; T cell exclusion</h3>
                      <p class="projects__description">
-                        7,186 cells from 31 tumours (GSE115978). A tumour-level pseudobulk reanalysis
-                        cut 5,384 cell-level hits to 117; EMP1 loss after treatment is the robust signal.
+                        7,186 cells from 31 tumours (GSE115978). With tumours rather than cells as
+                        replicates, only 61 of 5,384 cell-level hits hold up; EMP1 loss after treatment
+                        is the strongest signal left.
                      </p>
                      <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/melanoma-scrnaseq-resistance" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
@@ -245,7 +219,7 @@
                      <h3 class="projects__title">scanpy-lowmem</h3>
                      <p class="projects__description">
                         Patterns and patches to integrate ~486k single cells on a 16 GB laptop, with tests
-                        and a memory benchmark showing that centred sparse PCA costs no extra RAM.
+                        and a memory benchmark: centred sparse PCA adds under 200 MB, less than the uncentred shortcut.
                      </p>
                      <a href="https://github.com/thaisdolzany/scanpy-lowmem" target="_blank" rel="noopener" class="projects__link">View repository <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>

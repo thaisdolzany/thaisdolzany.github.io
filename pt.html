@@ -142,33 +142,6 @@
             </div>
 
             <div class="projects__track" id="projects-track">
-               <!-- BRIDGE-TF -->
-               <article class="projects__card" data-cat="research">
-                  <div class="projects__cover projects__cover--art">
-                     <svg viewBox="0 0 320 180" aria-hidden="true" class="projects__art">
-                        <g fill="none" stroke="currentColor" stroke-width="1.2" opacity=".75">
-                           <path d="M40 140 L110 70 L190 110 L270 40"/><path d="M110 70 L150 30 L190 110"/>
-                           <path d="M40 140 L190 110"/><path d="M150 30 L270 40"/><path d="M190 110 L250 150"/>
-                        </g>
-                        <g fill="currentColor">
-                           <circle cx="40" cy="140" r="6"/><circle cx="110" cy="70" r="9"/><circle cx="190" cy="110" r="11"/>
-                           <circle cx="270" cy="40" r="7"/><circle cx="150" cy="30" r="5"/><circle cx="250" cy="150" r="6"/>
-                        </g>
-                     </svg>
-                     <span class="projects__badge">Pré-registrado</span>
-                  </div>
-                  <div class="projects__data">
-                     <span class="projects__subtitle">Câncer de mama · scRNA-seq · Regulons</span>
-                     <h3 class="projects__title">BRIDGE-TF</h3>
-                     <p class="projects__description">
-                        Módulos conservados de fatores de transcrição por trás da plasticidade de estados
-                        celulares malignos. Descoberta em dois atlas de scRNA-seq, validação em metástase e
-                        no TCGA-BRCA. O protocolo foi publicado antes da análise, como pré-registro.
-                     </p>
-                     <a href="https://github.com/thaisdolzany/BRIDGE-TF-protocol" target="_blank" rel="noopener" class="projects__link">Ver protocolo <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
-                  </div>
-               </article>
-
                <!-- Melanoma resistance -->
                <article class="projects__card" data-cat="research">
                   <div class="projects__cover">
@@ -178,9 +151,9 @@
                      <span class="projects__subtitle">Melanoma · scRNA-seq · Imunoterapia</span>
                      <h3 class="projects__title">Programa de resistência maligna &amp; exclusão de células T</h3>
                      <p class="projects__description">
-                        7.186 células de 31 tumores (GSE115978). Uma reanálise pseudobulk por tumor reduziu
-                        5.384 genes significativos no nível celular para 117; a perda de EMP1 após o
-                        tratamento é o sinal robusto.
+                        7.186 células de 31 tumores (GSE115978). Com tumores, e não células, como
+                        réplicas, só 61 dos 5.384 genes significativos no nível celular se mantêm; a perda
+                        de EMP1 após o tratamento é o sinal mais forte que resta.
                      </p>
                      <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/melanoma-scrnaseq-resistance" target="_blank" rel="noopener" class="projects__link">Ver análise <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
@@ -248,7 +221,7 @@
                      <h3 class="projects__title">scanpy-lowmem</h3>
                      <p class="projects__description">
                         Padrões e patches para integrar ~486 mil células em um notebook de 16 GB, com testes
-                        e um benchmark de memória mostrando que o PCA esparso centralizado não usa RAM extra.
+                        e um benchmark de memória: o PCA esparso centralizado usa menos de 200 MB extras, menos que o atalho sem centralizar.
                      </p>
                      <a href="https://github.com/thaisdolzany/scanpy-lowmem" target="_blank" rel="noopener" class="projects__link">Ver repositório <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
