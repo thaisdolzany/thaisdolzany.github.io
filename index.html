@@ -3,7 +3,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Thaís Dolzany, PhD. Pharmacist and translational oncology researcher working on single-cell transcriptomics, target prioritisation and drug repurposing.">
+   <meta name="description" content="Thaís Dolzany, PhD. Pharmacist and translational oncology researcher working on single-cell transcriptomics, NGS pipelines, target prioritisation and drug repurposing.">
+   <meta name="keywords" content="single-cell RNA-seq, NGS, Nextflow, variant calling, bioinformatics, translational oncology, drug repurposing, target prioritisation, pharmacist, PhD">
    <meta name="author" content="Thaís Dolzany">
 
    <meta property="og:title" content="Thaís Dolzany, PhD">
@@ -114,7 +115,8 @@
 
                <ul class="about__tools">
                   <li>R</li><li>Python</li><li>Seurat</li><li>Scanpy</li><li>Harmony</li>
-                  <li>pySCENIC</li><li>DESeq2</li><li>GSEA</li><li>pandas</li><li>RDKit</li><li>XGBoost</li><li>scikit-learn</li><li>Git</li>
+                  <li>pySCENIC</li><li>DESeq2</li><li>GSEA</li><li>pandas</li><li>RDKit</li><li>XGBoost</li><li>scikit-learn</li>
+                  <li>Nextflow</li><li>BWA</li><li>samtools</li><li>bcftools</li><li>MultiQC</li><li>Docker</li><li>GitHub Actions</li><li>Git</li>
                   <li>GEO</li><li>TCGA</li><li>cBioPortal</li><li>ClinicalTrials.gov</li>
                </ul>
 
@@ -212,6 +214,24 @@
                         training set falls.
                      </p>
                      <a href="https://github.com/thaisdolzany/computational-pharmacology-portfolio/tree/main/solubility-scaffold-shift" target="_blank" rel="noopener" class="projects__link">View analysis <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                  </div>
+               </article>
+
+               <!-- ngs-germline-panel-nf -->
+               <article class="projects__card" data-cat="tools">
+                  <div class="projects__cover projects__cover--art">
+                     <div class="projects__glyph"><i class="ri-dna-line" aria-hidden="true"></i><span>Nextflow · CI</span></div>
+                     <span class="projects__badge">Validated</span>
+                  </div>
+                  <div class="projects__data">
+                     <span class="projects__subtitle">NGS · Nextflow · Germline variants</span>
+                     <h3 class="projects__title">ngs-germline-panel-nf</h3>
+                     <p class="projects__description">
+                        Nextflow pipeline for gene panels: QC, alignment, per-target coverage, variant
+                        calling and annotation. Benchmarked against a truth set on every push: 131 of 132
+                        variants recovered, the one miss flagged as low coverage.
+                     </p>
+                     <a href="https://github.com/thaisdolzany/ngs-germline-panel-nf" target="_blank" rel="noopener" class="projects__link">View repository <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                   </div>
                </article>
 
